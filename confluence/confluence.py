@@ -156,7 +156,7 @@ class Confluence(object):
                     return possible
             return None
 
-        config = ConfigParser.SafeConfigParser(defaults={'user': username, 'pass': password, 'appid': appid})
+        config = ConfigParser.SafeConfigParser(defaults={'user': str(username), 'pass': str(password), 'appid': str(appid)})
 
         config_file = findfile('config.ini')
         if debug:
